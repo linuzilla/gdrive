@@ -1,0 +1,20 @@
+application:
+  name: Google Drive Sync
+  working-dir: /tmp
+  log-level: notice
+  editor: /usr/bin/vim
+
+google-drive:
+  credential: /path/to/credential-file.json
+  folder-id: The_default_folder Id
+
+database:
+  file: google-drive
+  log: false
+
+plugin:
+  commands: /path/to/plugin/commands
+
+codec:
+  encoder: "/usr/bin/openssl aes-256-cbc -e -pbkdf2 -pass file:#{password-file}"
+  decoder: "/usr/bin/openssl aes-256-cbc -d -pbkdf2 -pass file:#{password-file}"

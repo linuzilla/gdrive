@@ -12,4 +12,11 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
+.idea/
+
+*.yml
+*.json
+*.sqlite3
+
+!application-sample.yml
